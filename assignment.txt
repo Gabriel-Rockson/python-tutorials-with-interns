@@ -1,0 +1,40 @@
+Assignment on Classes
+-----------------------
+To execute this assignment, create your own branch with name of branch
+in the format: `feature/bank-account-application-{initials of developer's name}`
+-> Name your files in this format: {my_name}-bank-app.py
+
+
+1. Create a class called Account with the following attributes:
+    account_number (string)
+    balance (float)
+
+Include a constructor that initializes these attributes.
+
+2 Create a class called SavingsAccount that inherits from the Account class. Add the following attributes:
+    interest_rate (float)
+    minimum_balance (float)
+
+Include a constructor that calls the parent constructor (Account) and sets the interest_rate and minimum_balance attributes.
+
+3. Create a class called CheckingAccount that also inherits from the Account class. Add the following attributes:
+    transaction_limit (integer)
+    transaction_fee (float)
+
+Include a constructor that calls the parent constructor (Account) and sets the transaction_limit and transaction_fee attributes.
+
+4 Create a method in the Account class called display_balance() that prints out the current balance of the account.
+
+5. Implement the following methods in the SavingsAccount class:
+    apply_interest(): This method should calculate and add the interest to the account balance based on the interest rate.
+    withdraw(amount): This method should allow withdrawing funds from the account. Check if the balance will fall below 
+    the minimum balance after the withdrawal. If so, print a warning message and do not perform the withdrawal.
+
+6. Implement the following methods in the CheckingAccount class:
+    withdraw(amount): This method should allow withdrawing funds from the account. If the withdrawal amount exceeds the transaction limit,
+    deduct the transaction fee from the account balance. 
+    deposit(amount): This method should allow depositing funds into the account.
+
+7. Create instances of the SavingsAccount and CheckingAccount classes, providing appropriate values for each attribute.
+
+Call the display_balance() method for each account to show their current balance.
