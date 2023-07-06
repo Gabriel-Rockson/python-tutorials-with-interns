@@ -3,6 +3,9 @@ class Account():
         self.account_number = account_number
         self.balance = balance
 
+    def display_balance():
+        print("The current balance is ")
+
 class SavingsAccount(Account):
     def __init__(self, account_number: str, balance: float, interest_rate: float, minimum_balance: float) -> None:
         super().__init__(account_number, balance, )
@@ -14,3 +17,4 @@ class CheckingAccount(Account):
         super().__init__(account_number, balance)
         self.transaction_limit = transaction_limit
         self.transaction_fee = transaction_fee
+
