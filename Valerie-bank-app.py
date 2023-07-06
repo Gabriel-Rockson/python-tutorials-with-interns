@@ -3,11 +3,31 @@ class Account:
         self.account_number = account_number
         self.balance = balance
 
+    def display_balance(self):
+        print("Current balance:", self.balance)
+
 
 class SavingsAccount(Account):
-    def __init__(self, interest_rate: float, minimum_balance: float):
+    def __init__(
+        self,
+        account_number: str,
+        balance: float,
+        interest_rate: float,
+        minimum_balance: float,
+    ):
+        super().__init__(account_number, balance)
         self.interest_rate = interest_rate
         self.minimum_balance = minimum_balance
-        account_number = 1234567890
-        balance = 300000000
+
+
+class CheckingAccount(Account):
+    def __init__(
+        self,
+        account_number: str,
+        balance: float,
+        transaction_limit: int,
+        transaction_fee: float,
+    ):
         super().__init__(account_number, balance)
+        self.transaction_limit = transaction_limit
+        self.transaction_fee = transaction_fee
