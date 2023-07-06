@@ -17,4 +17,3 @@ class CheckingAccount(Account):
         super().__init__(account_number, balance)
         self.transaction_limit = transaction_limit
         self.transaction_fee = transaction_fee
-
